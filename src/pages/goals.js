@@ -31,42 +31,6 @@ export default function Login() {
     <>
     <h1>Goals</h1>
     <SimpleAccordion />
-    <Box sx={{ width: '100%', maxWidth: 700, bgcolor: 'white', margin: 'auto' }}>
-      <nav aria-label="main mailbox folders">
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton onClick={() =>nextPage()} >
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Future Proof Against Recession" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton onClick={() =>nextPage()}>
-              <ListItemIcon>
-                <DraftsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Accumlate Wealth" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton onClick={() =>nextPage()}>
-              <ListItemIcon>
-                <PaymentsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Save money" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </nav>
-      <Divider />
-      
-    </Box>
-    
-    {/* <IconButton onClick={() => navigate('/about')} color="primary" aria-label="upload picture" component="label">
-         <img style={{objectFit: 'contain', height: '10vh'}} src={require('../img/login.png')}></img>
-    </IconButton> */}
     <LabelBottomNavigation/>
 
     </>
