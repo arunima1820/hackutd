@@ -31,9 +31,7 @@ export default function Login() {
     <>
     <h1>Goals</h1>
     <SimpleAccordion />
-
-
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'grey', margin: 'auto' }}>
+    <Box sx={{ width: '100%', maxWidth: 700, bgcolor: 'white', margin: 'auto' }}>
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>
