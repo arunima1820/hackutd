@@ -9,7 +9,22 @@ export default function Login() {
 
   return (
     <>
-    <img src={require('../img/title.png')}></img>
+    <img style={{
+      paddingBottom:'20px',
+      width: "600px",
+      height:"400px",
+    }} src={require('../img/logo.gif')}></img>
+    <img style={{
+      paddingBottom:'20px',
+      position: 'absolute',
+  top: '80px',
+  right: '0',
+    }
+    } src={require('../img/shinyPig.png')}></img>
+    
+    <p>
+      Welcome to your personalized budgeter and financial literacy teacher, that adapts to YOU!
+    </p>
     <Box
       component="form"
       sx={{
@@ -33,6 +48,8 @@ export default function Login() {
     <IconButton onClick={() => navigate('/about')} color="primary" aria-label="upload picture" component="label">
          <img style={{objectFit: 'contain', height: '10vh'}} src={require('../img/login.png')}></img>
     </IconButton>
+    
+
     </>
   );
 }
