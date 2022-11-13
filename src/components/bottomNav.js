@@ -14,11 +14,11 @@ export default function LabelBottomNavigation() {
 
 
   return (
-    
+    <>
     <BottomNavigation value={value} s>
         {/* <BottomNavigation value={value} onChange={() => navigate('./' + value)}> */}
       <BottomNavigationAction
-        label="Recents"
+        label="About"
         value="about"
         icon={<img style={{marginTop:'50px', width:'100px'}} src={require('../img/coins.png')}/>}
         onClick = {() => navigate('/about')}
@@ -37,5 +37,7 @@ export default function LabelBottomNavigation() {
       />
       {/* <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} /> */}
     </BottomNavigation>
+    
+    </>
   );
 }

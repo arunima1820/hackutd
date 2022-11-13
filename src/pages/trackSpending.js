@@ -1,14 +1,20 @@
 import * as React from 'react';
-import { BottomNavigation, CircularProgress, TextField, Typography } from '@mui/material';
+import { BottomNavigation, Button, CircularProgress, TextField, Typography } from '@mui/material';
 import LabelBottomNavigation from '../components/bottomNav';
+import { useNavigate } from 'react-router-dom';
 
 export default function TrackSpending () {
+    const navigate = useNavigate()
+
     return(
         <>
-            <Typography variant="h1">Track Spending</Typography>
-            <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-            <CircularProgress variant="determinate" value={25} />
-            {/* <LabelBottomNavigation></LabelBottomNavigation> */}
+            <img height="300vh" src={require('../img/track.png')}></img>
+            <img height="300vh" src={require('../img/budgetdata.png')}></img>
+            <br></br>
+            <Button variant="outlined" color="success" onClick={() => navigate('/category')}>
+                Log Spending
+            </Button>
+            <LabelBottomNavigation></LabelBottomNavigation>
         </>
     )
 }

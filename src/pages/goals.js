@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 import { Button } from '@mui/material';
+import LabelBottomNavigation from '../components/bottomNav';
+
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -67,6 +69,8 @@ export default function Login() {
     {/* <IconButton onClick={() => navigate('/about')} color="primary" aria-label="upload picture" component="label">
          <img style={{objectFit: 'contain', height: '10vh'}} src={require('../img/login.png')}></img>
     </IconButton> */}
+    <LabelBottomNavigation/>
+
     </>
   );
 }

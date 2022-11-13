@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 import { Button } from '@mui/material';
+import LabelBottomNavigation from '../components/bottomNav';
+
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -15,9 +17,9 @@ import ImageIcon from '@mui/icons-material/Image';
 import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 
-export default function Login() {
+export default function Reco(props) {
     const navigate = useNavigate();
-    const [goal, setGoal] = useState();
+    const [goal, setGoal] = useState(props.goalList);
     var nextPage = () => {
         navigate('/about')
         console.log("click")
@@ -31,7 +33,6 @@ export default function Login() {
     
     <h1>Recomendations</h1>
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'grey', margin: 'auto' }}>
-      
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>
         <ListItemAvatar>
@@ -67,6 +68,8 @@ export default function Login() {
     {/* <IconButton onClick={() => navigate('/about')} color="primary" aria-label="upload picture" component="label">
          <img style={{objectFit: 'contain', height: '10vh'}} src={require('../img/login.png')}></img>
     </IconButton> */}
+    <LabelBottomNavigation/>
+
     </>
   );
 }

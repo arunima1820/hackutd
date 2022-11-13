@@ -14,16 +14,13 @@ export default function Piggy () {
 
     return(
         <>
-        
         <img height="300vh" src={require('../img/shop.png')}></img>
-
         <img src={require('../img/' + piggyFit)}></img>
-    
         <div class="grid">
         <div class="square fullImg">
         <IconButton onClick={() => setPiggyFit('monocle.png')}>
             <img src={require('../img/acc2.png')}/>
-            </IconButton>
+        </IconButton>
         </div>
         <div class="square fullImg">
             <img src={require('../img/acc3.png')}/>
@@ -31,19 +28,10 @@ export default function Piggy () {
         <div class="square fullImg">
         <IconButton onClick={() => setPiggyFit('monoclehat.png')}>
             <img src={require('../img/acc4.png')}/>
-            </IconButton>
+        </IconButton>
             </div>
-        {/* <div class="square fullImg">
-            <img src="./img/acc2.png"/>
-        </div>
-        <div class="square fullImg">
-            <img src="./img/acc3.png"/>
-        </div>
-        <div class="square fullImg">
-            <img src="./img/acc4.png"/>
-        </div> */}
     </div>
-<LabelBottomNavigation></LabelBottomNavigation>
+<LabelBottomNavigation/>
         </>
     )
 }

@@ -27,7 +27,8 @@ function App() {
           <Route path="/goal" element={<Goal  data={userData} setData={setUserData} />} />
           <Route path="/reco" element={<Reco  data={userData} setData={setUserData} />} />
           <Route path="/login" element={<Login data={userData} setData={setUserData}  />} />
-          <Route path="/trackSpending" element={<SpendingCategory  data={userData} setData={setUserData} />} />
+          <Route path="/category" element={<SpendingCategory data={userData} setData={setUserData} />} />
+          <Route path="/trackSpending" element={<TrackSpending data={userData} setData={setUserData} />} />
           <Route path="/" element={<Login  data={userData} setData={setUserData} />} />
         </Routes>
     </Router>
