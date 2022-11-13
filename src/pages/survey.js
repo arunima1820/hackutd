@@ -6,14 +6,24 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';import { useNavigate } from 'react-router-dom';
+import '../basicstyle.css'
 
 export default function SurveyPage () {
     const [income, setIncome] = useState();
     const [incomeType, setIncomeType] = useState('monthly');
     const navigate = useNavigate()
-
+    
+  
     return(
         <>
+        <img style={{paddingBottom:'20px',
+        position: 'absolute',
+    top: '80px',
+    right: '50px'
+      }} 
+      alt=""
+      src={require('../img/pigdef.gif')}></img>
+    
         <img  style={{objectFit: 'contain', height: '10vh', margin: 'auto'}} src={require('../img/aboutme.png')}></img>
             <br />
         <Box sx={{ width: '100%', maxWidth: 360, margin: 'auto' }}>
@@ -32,6 +42,7 @@ export default function SurveyPage () {
                 startAdornment={<InputAdornment position="start">$</InputAdornment>}
                 label="Current Monthly Income"
             />
+            <br></br>
             <FormControl>
             <FormLabel>Income Type</FormLabel>
             <RadioGroup
@@ -45,6 +56,7 @@ export default function SurveyPage () {
                 <FormControlLabel value="biweekly" control={<Radio />} label="Bi-Weekly" />
             </RadioGroup>
             </FormControl>
+            <br></br>
             <InputLabel htmlFor="outlined-adornment-amount">Current {incomeType} Income</InputLabel>
             <OutlinedInput
                 id="outlined-adornment-amount"
@@ -52,6 +64,8 @@ export default function SurveyPage () {
                 startAdornment={<InputAdornment position="start">$</InputAdornment>}
                 label="Current Monthly Income"
             />
+                        <br></br>
+
             <InputLabel htmlFor="outlined-adornment-amount">Current Debt</InputLabel>
             <OutlinedInput
                 id="outlined-adornment-amount"
@@ -60,6 +74,9 @@ export default function SurveyPage () {
                 label="Current Monthly Income"
             />
             <br></br>
+            <br></br>
+            <br></br>
+
             <Button variant="outlined" onClick={() => navigate('/goal')}>Next</Button>
             </div>
         </Box>
