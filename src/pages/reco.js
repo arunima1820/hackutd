@@ -31,7 +31,7 @@ export default function Reco(props) {
     <>
     
     
-    <h1>Recomendations</h1>
+    <h1>Recommendations</h1>
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'grey', margin: 'auto' }}>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem>

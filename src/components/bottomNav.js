@@ -1,10 +1,6 @@
 import * as React from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import FolderIcon from '@mui/icons-material/Folder';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useNavigate } from "react-router-dom";
 
 
@@ -21,7 +17,7 @@ export default function LabelBottomNavigation() {
         label="About"
         value="about"
         icon={<img style={{marginTop:'50px', width:'100px'}} src={require('../img/coins.png')}/>}
-        onClick = {() => navigate('/about')}
+        onClick = {() => navigate('/piggy')}
       />
       <BottomNavigationAction
         label="Favorites"
@@ -33,7 +29,7 @@ export default function LabelBottomNavigation() {
         label="Nearby"
         value="trackSpending"
         icon={<img style={{marginTop:'50px', width:'100px'}} src={require('../img/pig.png')}/>}
-        onClick = {() => navigate('/piggy')}
+        onClick = {() => navigate('/reco')}
       />
       {/* <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} /> */}
     </BottomNavigation>

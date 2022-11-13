@@ -17,6 +17,7 @@ import Divider from '@mui/material/Divider';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import PaymentsIcon from '@mui/icons-material/Payments';
+import SimpleAccordion from '../components/accordion';
 
 export default function Login() {
     const navigate = useNavigate();
@@ -26,13 +27,12 @@ export default function Login() {
         console.log("click")
     }
     
-    
-
   return (
     <>
-    
-    
     <h1>Goals</h1>
+    <SimpleAccordion />
+
+
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'grey', margin: 'auto' }}>
       <nav aria-label="main mailbox folders">
         <List>
