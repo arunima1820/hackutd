@@ -1,11 +1,37 @@
 import * as React from 'react';
-import { BottomNavigation, Card, CardMedia, CircularProgress, FormControl, FormControlLabel, IconButton, Radio, RadioGroup, TextField, Typography } from '@mui/material';
+import { BottomNavigation, Card, CardMedia, CircularProgress,Button, FormControl, FormControlLabel, IconButton, Radio, RadioGroup, TextField, Typography } from '@mui/material';
 import LabelBottomNavigation from '../components/bottomNav';
 import '../shop.css'
 import Checkbox from '@mui/material/Checkbox';
 
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+
+
+
+
 export default function SpendingCategory () {
     const [checked, setChecked] = React.useState(true);
+
+
+    const Alert = React.forwardRef(function Alert(props, ref) {
+        return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+      });
+    
+      const [open, setOpen] = React.useState(false);
+    
+      const handleClick = () => {
+        setOpen(true);
+      };
+    
+      const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setOpen(false);
+      };
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -54,8 +80,15 @@ export default function SpendingCategory () {
         <FormControlLabel value="food" control={<Radio />} label="Food" />
         <FormControlLabel value="services" control={<Radio />} label="Services" />
         <FormControlLabel value="merchandise" control={<Radio />} label="Merchandise" />
+        <TextField id="outlined-basic" label="Amount" variant="outlined" />
+        <Button variant="outlined" onClick={handleClick}>Log item</Button>
       </RadioGroup>
     </FormControl>
+    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+          Item succesfully logged!
+        </Alert>
+      </Snackbar>
 <LabelBottomNavigation></LabelBottomNavigation>
         </>
     )

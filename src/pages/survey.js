@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Button, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from '@mui/material';
+import { Box, Button, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -14,8 +14,12 @@ export default function SurveyPage () {
 
     return(
         <>
-            <img  style={{objectFit: 'contain', height: '10vh'}} src={require('../img/aboutme.png')}></img>
+        <img  style={{objectFit: 'contain', height: '10vh', margin: 'auto'}} src={require('../img/aboutme.png')}></img>
             <br />
+        <Box sx={{ width: '100%', maxWidth: 360, margin: 'auto' }}>
+
+        
+            
             <div style={{
                 width: '40vw', 
                 alignItems: 'center',
@@ -56,8 +60,13 @@ export default function SurveyPage () {
                 label="Current Monthly Income"
             />
             <br></br>
-            <Button variant="outlined" onChange={() => navigate('/trackSpending')}>Next</Button>
+            <Button variant="outlined" onClick={() => navigate('/goal')}>Next</Button>
             </div>
+        </Box>
+
+            {/* <IconButton onClick={() => navigate('/about')} color="primary" aria-label="upload picture" component="label">
+         <img style={{objectFit: 'contain', height: '10vh'}} src={require('../img/login.png')}></img>
+    </IconButton> */}
         </>
     )
 }

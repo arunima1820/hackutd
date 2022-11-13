@@ -13,6 +13,8 @@ import SurveyPage from './pages/survey';
 import { useState } from 'react';
 import Piggy from './pages/piggy';
 import SpendingCategory from './pages/spendingCategory';
+import Goal from './pages/goals'
+import Reco from './pages/reco'
 
 function App() {
   const [userData, setUserData] = useState({});
@@ -22,7 +24,8 @@ function App() {
         <Routes>
           <Route path="/about" element={<SurveyPage data={userData} setData={setUserData} />} />
           <Route path="/piggy" element={<Piggy  data={userData} setData={setUserData} />} />
-
+          <Route path="/goal" element={<Goal  data={userData} setData={setUserData} />} />
+          <Route path="/reco" element={<Reco  data={userData} setData={setUserData} />} />
           <Route path="/login" element={<Login data={userData} setData={setUserData}  />} />
           <Route path="/trackSpending" element={<SpendingCategory  data={userData} setData={setUserData} />} />
           <Route path="/" element={<Login  data={userData} setData={setUserData} />} />

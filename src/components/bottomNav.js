@@ -14,21 +14,26 @@ export default function LabelBottomNavigation() {
 
 
   return (
-    <BottomNavigation value={value} onChange={() => navigate('./' + value)}>
+    
+    <BottomNavigation value={value} s>
+        {/* <BottomNavigation value={value} onChange={() => navigate('./' + value)}> */}
       <BottomNavigationAction
         label="Recents"
         value="about"
         icon={<img style={{marginTop:'50px', width:'100px'}} src={require('../img/coins.png')}/>}
+        onClick = {() => navigate('/about')}
       />
       <BottomNavigationAction
         label="Favorites"
         value="piggy"
         icon={<img style={{marginTop:'50px', width:'100px'}} src={require('../img/home.png')}/>}
+        onClick = {() => navigate('/trackSpending')}
       />
       <BottomNavigationAction
         label="Nearby"
         value="trackSpending"
         icon={<img style={{marginTop:'50px', width:'100px'}} src={require('../img/pig.png')}/>}
+        onClick = {() => navigate('/piggy')}
       />
       {/* <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} /> */}
     </BottomNavigation>
